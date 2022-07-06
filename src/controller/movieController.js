@@ -46,7 +46,7 @@ exports.findTopTen = async(req, res) => {
                 return votes;
             });
             const voteValue = (value.filter(item => item.vote === true)).length;
-            m.vote = voteValue;
+            m.vote = m.vote+voteValue;
             return m;
         })
         const response = await Promise.all(resp)

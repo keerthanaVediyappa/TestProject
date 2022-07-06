@@ -15,7 +15,7 @@ exports.findByGenre = (genre) => {
 };
 
 exports.findTopTen = (req) => {
-  const query = { _id: 1, name: 1, genre: 1 };
+  const query = { _id: 1, name: 1, genre: 1, vote:1};
   return movie.find().select(query).limit(10);
 };
 
